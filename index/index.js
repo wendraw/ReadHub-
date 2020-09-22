@@ -4,23 +4,9 @@ Page({
   data: {
 
   },
-  onLoad: function () {
-    // wx.request({
-    //   url: 'https://api.readhub.cn/topic',
-    //   data: {
-    //     x: '',
-    //     y: ''
-    //   },
-    //   header: {
-    //     'content-type': 'application/json' // 默认值
-    //   },
-    //   success(res) {
-    //     console.log(res.data)
-    //   }
-    // })
-  },
+  onLoad: function () {},
 
   handlerLeftIconPress(e) {
     console.log(e)
-  }
+  },
 })
