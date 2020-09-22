@@ -1,0 +1,5 @@
+<mp-navigation-bar loading="{{loading}}" show="{{show}}" animated="{{animated}}" color="{{color}}"
+  background="{{background}}" title="{{title}}" back="{{false}}">
+  <mp-icon slot="left" type="field" icon="{{iconName}}" size="22" bindtap="onLeftIconPess">
+  </mp-icon>
+</mp-navigation-bar>
