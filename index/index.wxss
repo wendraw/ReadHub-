@@ -9,48 +9,25 @@
   align-items: center;
 }
 
-.title {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between
-}
-
-.card {
-  border: 1rpx solid #ddd;
-  border-radius: 5px;
-  background-color: white;
-  padding: 20px;
-}
-
-.card-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: #333;
-}
-
-.card-content {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  text-align: justify;
-  font-size: 16px;
-  font-weight: 300;
-  color: #111;
-  line-height: 28px;
-}
-
-.card-user-express {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-}
-
-.card-footer {
+.time-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 10px;
+  align-items: center;
+  margin: 10px 0px 10px 0px;
+}
 
-  color: #7F7F7F;
-  font-size: 16px;
+.time {
+  color: #626262;
+  font-size: 30px;
   font-weight: 300;
+  margin-left: 10px;
+}
+
+.subscribe-icon {
+  margin-bottom: 4px;
+}
+
+.share-hover-class {
+  opacity: 0.7;
 }

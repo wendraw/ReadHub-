@@ -18,7 +18,8 @@ Page({
         "hasInstantView": true,
         "statementType": 1
       }],
-    }]
+    }],
+    subscribed: false
   },
   onLoad: function () {},
 
@@ -30,5 +31,33 @@ Page({
     // wx.navigateTo({
     //   url: '/search-page/search-page',
     // })
+  },
+
+  handleSubscribeTap(e) {
+    this.setData({
+      subscribed: !this.data.subscribed
+    }, () => {
+      if (this.data.subscribed) {
+        wx.showToast({
+          title: '已订阅，将于明早发送',
+          icon: 'none',
+          duration: 2000
+        })
+      } else {
+        wx.showToast({
+          title: '已取消订阅',
+          icon: 'none',
+          duration: 2000
+        })
+      }
+    })
+  },
+
+  handleCardTap(e) {
+    console.log("handleCardTap", e)
+  },
+
+  handleShareTap(e) {
+    console.log("handleShareTap", e);
   }
 })

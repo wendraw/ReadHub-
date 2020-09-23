@@ -13,15 +13,23 @@
   <search bindtap="handleSearchTap"></search>
 
   <view>
-    <view class="title">
-      <text>今天</text>
-      <view>订阅</view>
+    <view class="time-container">
+      <text class="time">今天</text>
+      <view bindtap="handleSubscribeTap"
+        style="color:{{subscribed? '#777' : '#222'}}; margin-right:10px;font-weight: 300;">
+        <mp-icon extClass="subscribe-icon" color="{{subscribed? '#777' : '#222'}}"
+          icon="{{subscribed? 'done2': 'add2'}}" size="20" />
+        {{subscribed ? '已订阅' : '订阅早报'}}
+      </view>
     </view>
-    <view wx:for="{{topics}}">
-      <card title="{{item.title}}" summary="{{utils.getFrontString(item.summary, '...')}}" hasExpress="true"
-        userRatio="{{100}}"
+    <view wx:for="{{topics}}" wx:for-index="{{index}}" wx:key="*this">
+      <card bindtap="handleCardTap" title="{{item.title}}" summary="{{utils.getFrontString(item.summary, '...')}}"
+        hasExpress="true" userRatio="{{100}}"
         sitename="{{item.newsArray[0] && item.newsArray[0].siteName}} {{item.newsArray.length > 1 ? '等 ' + item.newsArray.length + ' 家报道' : '报道'}}">
-        <mp-icon type="field" color="#C4C4C4" icon="share" size="24" />
+        <view catchtap="handleShareTap" hover-class="share-hover-class" hover-stop-propagation="true"
+          style="margin-bottom:4px">
+          <mp-icon type="field" color="#C4C4C4" icon="share" size="28" />
+        </view>
       </card>
     </view>
   </view>
