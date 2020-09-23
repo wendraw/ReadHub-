@@ -1,0 +1,12 @@
+<view class="card" hover-class="card-hover-class">
+  <view class="card-title">{{title}}</view>
+  <view class="card-content">{{summary}}</view>
+  <view class="card-user-express" hidden="{{!hasExpress}}">
+    {{userRatio+"% 的用户看好"}}
+    <mp-icon style="margin-left:6px; margin-bottom:3px" type="field" color="gray" icon="arrow" size="10" />
+  </view>
+  <view class="card-footer">
+    <view class="card-sitename">{{sitename}}</view>
+    <slot></slot>
+  </view>
+</view>

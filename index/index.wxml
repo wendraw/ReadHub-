@@ -1,15 +1,28 @@
+<wxs module="utils">
+  function getFrontString(str, subStr) {
+    return str.slice(0, str.indexOf(subStr) + subStr.length);
+  }
+  module.exports = {
+    getFrontString: getFrontString,
+  }
+</wxs>
+
 <navigation-bar title="Readhub+" iconName="setting" onLeftIconPress="handleLeftIconPress" />
 
 <view class="page-body">
-  <search onTap="handleSearchTap"></search>
+  <search bindtap="handleSearchTap"></search>
 
   <view>
     <view class="title">
       <text>今天</text>
       <view>订阅</view>
     </view>
-    <view wx:for="{{[1,2,3,4,5]}}">
-      <view>{{item}}</view>
+    <view wx:for="{{topics}}">
+      <card title="{{item.title}}" summary="{{utils.getFrontString(item.summary, '...')}}" hasExpress="true"
+        userRatio="{{100}}"
+        sitename="{{item.newsArray[0] && item.newsArray[0].siteName}} {{item.newsArray.length > 1 ? '等 ' + item.newsArray.length + ' 家报道' : '报道'}}">
+        <mp-icon type="field" color="#C4C4C4" icon="share" size="24" />
+      </card>
     </view>
   </view>
 

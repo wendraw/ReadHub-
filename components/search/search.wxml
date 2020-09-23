@@ -1,5 +1,5 @@
-<view class="flex-center search-btn" hover-class="hover-search-btn" 
-hover-stay-time="0" bindtouchstart="handleTouchStart" bindtouchend="handleTouchEnd">
-  <mp-icon style="margin-right:4px;padding-bottom:2px;" type="field" icon="search" color="{{color}}" size="23" />
+<view class="flex-center search-btn" hover-class="hover-search-btn" style="fontColor">
+  <mp-icon style="margin-right:4px;padding-bottom:2px;" type="field" icon="search" color="{{iconColor}}"
+    size="{{iconSize}}" />
   搜索
 </view>

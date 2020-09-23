@@ -2,7 +2,23 @@ const app = getApp()
 
 Page({
   data: {
-
+    topics: [{
+      "title": "星星充电获得8.55亿元A轮融资，中金资本旗下基金和施耐德电气领投",
+      "summary": "9月22日，星星充电（万帮数字能源股份有限公司）宣布获得8.55亿元人民币A轮融资，这是星星充电首次启动社会化融资 ... 本轮A轮融资由中金资本旗下基金和施耐德电气领投，建银国际、国创中鼎、上海国和、武进高新区平台公司等跟投，摩根士丹利担任独家财务顾问。",
+      "newsArray": [{
+        "id": 2990564,
+        "url": "https://www.36kr.com/p/894300110680837",
+        "title": "星星充电获得8.55亿元A轮融资，中金资本旗下基金和施耐德电气领投",
+        "siteName": "36Kr",
+        "mobileUrl": "https://www.36kr.com/p/894300110680837",
+        "autherName": null,
+        "duplicateId": 2,
+        "publishDate": "2020-09-23T10:08:47.972Z",
+        "language": "zh-cn",
+        "hasInstantView": true,
+        "statementType": 1
+      }],
+    }]
   },
   onLoad: function () {},
 
@@ -11,8 +27,8 @@ Page({
   },
 
   handleSearchTap(e) {
-    wx.navigateTo({
-      url: '/search-page/search-page',
-    })
+    // wx.navigateTo({
+    //   url: '/search-page/search-page',
+    // })
   }
 })
