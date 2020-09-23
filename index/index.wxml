@@ -1,9 +1,16 @@
-<navigation-bar title="Readhub+" iconName="setting" onLeftIconPress="handlerLeftIconPress" />
+<navigation-bar title="Readhub+" iconName="setting" onLeftIconPress="handleLeftIconPress" />
 
 <view class="page-body">
+  <search onTap="handleSearchTap"></search>
 
-  <view class="flex-center search-btn" hover-class="hover-search-btn">
-    <mp-icon style="margin-right:4px;padding-bottom:2px;" type="field" icon="search" color="#7f7f7f" size="23" />
-    搜索
+  <view>
+    <view class="title">
+      <text>今天</text>
+      <view>订阅</view>
+    </view>
+    <view wx:for="{{[1,2,3,4,5]}}">
+      <view>{{item}}</view>
+    </view>
   </view>
+
 </view>

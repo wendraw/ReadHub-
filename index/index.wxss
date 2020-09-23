@@ -3,21 +3,14 @@
   text-align: center;
 }
 
-.search-btn {
-  height: 44px;
-  border: 1rpx solid #ddd;
-  background-color: white;
-  border-radius: 6px;
-  font-size: 15px;
-  color: #7f7f7f;
-}
-
-.hover-search-btn {
-  background-color: rgba(255, 255, 255, 0.5)
-}
-
 .flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
 }

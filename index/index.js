@@ -6,7 +6,13 @@ Page({
   },
   onLoad: function () {},
 
-  handlerLeftIconPress(e) {
+  handleLeftIconPress(e) {
     console.log(e)
   },
+
+  handleSearchTap(e) {
+    wx.navigateTo({
+      url: '/search-page/search-page',
+    })
+  }
 })

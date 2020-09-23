@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "navigation-bar": "../components/navigation-bar/navigation-bar",
+    "search": "../components/search/search",
     "mp-icon": "weui-miniprogram/icon/icon"
   },
   "navigationBarTitleText": "ReadHub+"
