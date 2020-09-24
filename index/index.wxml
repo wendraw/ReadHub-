@@ -15,7 +15,10 @@
 </navigation-bar>
 
 <view class="page-body">
-  <search bindtap="handleSearchTap"></search>
+  <touchable-opacity customClass="flex-center search-btn">
+    <mp-icon style="margin-right:4px;padding-bottom:2px;" type="field" icon="search" color="#7f7f7f" size="23" />
+    搜索
+  </touchable-opacity>
 
   <view>
     <view class="time-container">
