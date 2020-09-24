@@ -7,7 +7,11 @@
   }
 </wxs>
 
-<navigation-bar title="Readhub+" iconName="setting" onLeftIconPress="handleLeftIconPress" />
+<navigation-bar title="Readhub+">
+  <touchable-opacity bindtap="handleSettingIconTap">
+    <mp-icon slot="left" type="field" icon="setting" size="22" />
+  </touchable-opacity>
+</navigation-bar>
 
 <view class="page-body">
   <search bindtap="handleSearchTap"></search>
@@ -23,15 +27,19 @@
       </view>
     </view>
     <view wx:for="{{topics}}" wx:for-index="{{index}}" wx:key="*this">
-      <card bindtap="handleCardTap" title="{{item.title}}" summary="{{utils.getFrontString(item.summary, '...')}}"
-        hasExpress="true" userRatio="{{100}}"
-        sitename="{{item.newsArray[0] && item.newsArray[0].siteName}} {{item.newsArray.length > 1 ? '等 ' + item.newsArray.length + ' 家报道' : '报道'}}">
-        <view catchtap="handleShareTap" hover-class="share-hover-class" hover-stop-propagation="true"
-          style="margin-bottom:4px">
-          <mp-icon type="field" color="#C4C4C4" icon="share" size="28" />
-        </view>
-      </card>
+      <touchable-opacity bindtap="handleCardTap">
+        <card title="{{item.title}}" summary="{{utils.getFrontString(item.summary, '...')}}" hasExpress="true"
+          userRatio="{{100}}"
+          sitename="{{item.newsArray[0] && item.newsArray[0].siteName}} {{item.newsArray.length > 1 ? '等 ' + item.newsArray.length + ' 家报道' : '报道'}}">
+          <touchable-opacity catchtap="handleShareTap" stopPropagation="true" style="margin-bottom:4px">
+            <mp-icon type="field" color="#C4C4C4" icon="share" size="28" />
+          </touchable-opacity>
+        </card>
+      </touchable-opacity>
     </view>
   </view>
-
 </view>
+
+<overlay show="{{false}}" zIndex="5555">
+  <view>xxx</view>
+</overlay>

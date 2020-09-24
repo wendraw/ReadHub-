@@ -4,7 +4,6 @@ Component({
    */
   properties: {
     title: String,
-    iconName: String, // https://developers.weixin.qq.com/miniprogram/dev/extended/weui/icon.html 支持的所有值
   },
 
   /**
@@ -21,9 +20,5 @@ Component({
   /**
    * 组件的方法列表
    */
-  methods: {
-    onLeftIconPess() {
-      this.triggerEvent('LeftIconPress')
-    }
-  }
+  methods: {}
 })

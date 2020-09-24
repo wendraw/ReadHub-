@@ -1,14 +1,16 @@
-// components/overlay/overlay.js
+// components/touchable-opacity/touchable-opacity.js
 Component({
+  options: {
+    addGlobalClass: true
+  },
+
   /**
    * 组件的属性列表
    */
   properties: {
-    show: Boolean,
-    zIndex: {
-      type: Number,
-      value: 5555
-    }
+    customHoverClass: String,
+    stopPropagation: Boolean,
+    customClass: String
   },
 
   /**
@@ -22,8 +24,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    onClick() {
-      console.log(show)
-    }
+
   }
 })

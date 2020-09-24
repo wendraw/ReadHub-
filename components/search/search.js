@@ -15,7 +15,8 @@ Component({
     fontColor: {
       type: String,
       value: '#7f7f7f'
-    }
+    },
+    customStyle: String,
   },
 
   /**

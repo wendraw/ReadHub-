@@ -23,7 +23,7 @@ Page({
   },
   onLoad: function () {},
 
-  handleLeftIconPress(e) {
+  handleSettingIconTap(e) {
     console.log(e)
   },
 

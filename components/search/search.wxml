@@ -1,4 +1,4 @@
-<view class="flex-center search-btn" hover-class="hover-search-btn" style="fontColor">
+<view class="flex-center search-btn" hover-class="hover-search-btn" style="color:{{fontColor}}; {{customStyle}}">
   <mp-icon style="margin-right:4px;padding-bottom:2px;" type="field" icon="search" color="{{iconColor}}"
     size="{{iconSize}}" />
   搜索

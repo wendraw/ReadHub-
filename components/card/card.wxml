@@ -1,4 +1,4 @@
-<view class="card" hover-class="card-hover-class">
+<view class="card">
   <view class="card-title">{{title}}</view>
   <view class="card-content">{{summary}}</view>
   <view class="card-user-express" hidden="{{!hasExpress}}">
