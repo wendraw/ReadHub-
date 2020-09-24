@@ -21,8 +21,8 @@ Page({
     }],
     subscribed: false,
 
-    settingViewX: null,
-    settingViewY: null,
+    settingViewTop: (app.globalData.safeArea.top || app.globalData.statusBarHeight) + 48,
+    settingViewLeft: app.globalData.safeArea.left,
     settingViewShow: false,
   },
   onLoad: function () {},
@@ -30,8 +30,6 @@ Page({
   handleSettingIconTap(e) {
     console.log(e);
     this.setData({
-      settingViewX: e.touches[0].clientX,
-      settingViewY: e.touches[0].clientY,
       settingViewShow: !this.data.settingViewShow,
     })
   },

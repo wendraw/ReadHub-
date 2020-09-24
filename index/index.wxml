@@ -45,7 +45,7 @@
 </view>
 
 <overlay show="{{settingViewShow}}" zIndex="5555" onOverlayClick="onOverlayClick">
-  <view class="setting-view" hover-stop-propagation="true" mut-bind:tap>
+  <view class="setting-view" style="top:{{settingViewTop }}px;" hover-stop-propagation="true" mut-bind:tap>
     <view class="triangle" />
     <view class="setting-view-item" style="margin-top:0px;padding-top:10px">
       <view class="setting-view-item-title">隐藏话题摘要</view>
