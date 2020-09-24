@@ -19,12 +19,21 @@ Page({
         "statementType": 1
       }],
     }],
-    subscribed: false
+    subscribed: false,
+
+    settingViewX: null,
+    settingViewY: null,
+    settingViewShow: false,
   },
   onLoad: function () {},
 
   handleSettingIconTap(e) {
-    console.log(e)
+    console.log(e);
+    this.setData({
+      settingViewX: e.touches[0].clientX,
+      settingViewY: e.touches[0].clientY,
+      settingViewShow: !this.data.settingViewShow,
+    })
   },
 
   handleSearchTap(e) {
@@ -59,5 +68,15 @@ Page({
 
   handleShareTap(e) {
     console.log("handleShareTap", e);
+  },
+
+  onOverlayClick() {
+    this.setData({
+      settingViewShow: false
+    })
+  },
+
+  handleSettingItemTap(e) {
+    console.log("handleSettingItemTap", e)
   }
 })

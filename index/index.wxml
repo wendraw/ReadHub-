@@ -2,6 +2,7 @@
   function getFrontString(str, subStr) {
     return str.slice(0, str.indexOf(subStr) + subStr.length);
   }
+
   module.exports = {
     getFrontString: getFrontString,
   }
@@ -21,8 +22,8 @@
       <text class="time">今天</text>
       <view bindtap="handleSubscribeTap"
         style="color:{{subscribed? '#777' : '#222'}}; margin-right:10px;font-weight: 300;">
-        <mp-icon extClass="subscribe-icon" color="{{subscribed? '#777' : '#222'}}"
-          icon="{{subscribed? 'done2': 'add2'}}" size="20" />
+        <mp-icon extClass="icon" color="{{subscribed? '#777' : '#222'}}" icon="{{subscribed? 'done2': 'add2'}}"
+          size="20" />
         {{subscribed ? '已订阅' : '订阅早报'}}
       </view>
     </view>
@@ -31,7 +32,7 @@
         <card title="{{item.title}}" summary="{{utils.getFrontString(item.summary, '...')}}" hasExpress="true"
           userRatio="{{100}}"
           sitename="{{item.newsArray[0] && item.newsArray[0].siteName}} {{item.newsArray.length > 1 ? '等 ' + item.newsArray.length + ' 家报道' : '报道'}}">
-          <touchable-opacity catchtap="handleShareTap" stopPropagation="true" style="margin-bottom:4px">
+          <touchable-opacity catchtap="handleShareTap" style="margin-bottom:4px">
             <mp-icon type="field" color="#C4C4C4" icon="share" size="28" />
           </touchable-opacity>
         </card>
@@ -40,6 +41,38 @@
   </view>
 </view>
 
-<overlay show="{{false}}" zIndex="5555">
-  <view>xxx</view>
+<overlay show="{{settingViewShow}}" zIndex="5555" onOverlayClick="onOverlayClick">
+  <view class="setting-view" hover-stop-propagation="true" mut-bind:tap>
+    <view class="triangle" />
+    <view class="setting-view-item" style="margin-top:0px;padding-top:10px">
+      <view class="setting-view-item-title">隐藏话题摘要</view>
+      <switch />
+    </view>
+    <touchable-opacity customClass="setting-view-item" catchtap="handleSettingItemTap">
+      <text class="setting-view-item-title">Readhub Pro</text>
+      <view class="setting-view-item-content">
+        <text style="margin-right:10px">已订阅 4</text>
+        <mp-icon extClass="icon" icon="arrow" size="12" color="#777" />
+      </view>
+    </touchable-opacity>
+    <touchable-opacity customClass="setting-view-item" catchtap="handleSettingItemTap">
+      <text class="setting-view-item-title">深色模式</text>
+      <view class="setting-view-item-content">
+        <text style="margin-right:10px">已关闭</text>
+        <mp-icon extClass="icon" icon="arrow" size="12" color="#777" />
+      </view>
+    </touchable-opacity>
+    <touchable-opacity customClass="setting-view-item" catchtap="handleSettingItemTap">
+      <text class="setting-view-item-title">联系客服</text>
+      <view class="setting-view-item-content">
+        <mp-icon extClass="icon" icon="arrow" size="12" color="#777" />
+      </view>
+    </touchable-opacity>
+    <touchable-opacity customClass="setting-view-item" catchtap="handleSettingItemTap">
+      <text class="setting-view-item-title">分享给朋友</text>
+      <view class="setting-view-item-content">
+        <mp-icon extClass="icon" icon="arrow" size="12" color="#777" />
+      </view>
+    </touchable-opacity>
+  </view>
 </overlay>

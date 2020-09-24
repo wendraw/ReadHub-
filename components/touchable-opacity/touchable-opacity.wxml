@@ -1,4 +1,4 @@
-<view class="{{customClass}}" hover-class="hover-opacity {{customHoverClass}}"
+<view class="{{customClass}}" style="{{customStyle}}" hover-class="hover-opacity {{customHoverClass}}"
   hover-stop-propagation="{{stopPropagation}}">
   <slot></slot>
 </view>

@@ -1,3 +1,3 @@
-<view class="overlay" bindtap="onClick" style="z-index:{{zIndex}}; {{ show ? '' : 'display: none;' }}">
+<view class="overlay" mut-bind:tap="onClick" style="z-index:{{zIndex}}; {{ show ? '' : 'display: none;' }}">
   <slot></slot>
 </view>

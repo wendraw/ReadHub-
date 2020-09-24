@@ -23,7 +23,7 @@ Component({
    */
   methods: {
     onClick() {
-      console.log(show)
+      this.triggerEvent("OverlayClick");
     }
   }
 })

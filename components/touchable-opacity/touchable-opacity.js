@@ -9,8 +9,12 @@ Component({
    */
   properties: {
     customHoverClass: String,
-    stopPropagation: Boolean,
-    customClass: String
+    stopPropagation: {
+      type: Boolean,
+      value: true,
+    },
+    customClass: String,
+    customstyle: String
   },
 
   /**
